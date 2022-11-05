@@ -14,23 +14,23 @@ const $StyleRoot = css`
     font-size: 14px;
     margin: 0;
     padding: 0;
-
-    &::-webkit-scrollbar {
+  }
+  * {
+    ::-webkit-scrollbar {
       height: 5px;
       width: 5px;
     }
-    &::-webkit-scrollbar-track {
+    ::-webkit-scrollbar-track {
       background: transparent;
       border: none;
     }
-    &::-webkit-scrollbar-thumb {
+    ::-webkit-scrollbar-thumb {
       background: lightslategrey;
       border-radius: 2px;
       box-shadow: none;
     }
   }
-
-  body {
+  #__next {
     user-select: none;
   }
 `
