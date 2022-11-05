@@ -1,0 +1,9 @@
+.env
+.next
+node_modules
+coverage
+dump.rdb
+config/*
+!config/default.json
+out
+newrelic_agent.log
