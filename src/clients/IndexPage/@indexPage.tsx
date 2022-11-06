@@ -1,10 +1,12 @@
 import { css } from "@emotion/react";
-import Head from "next/head";
 import { useRecoilValue } from "recoil";
-import { currentTimeSelector, useCurrentTimeInitializer } from "src/clients/IndexPage/currentTimeAtom";
-import { EmojiFavicon } from "src/clients/IndexPage/emojiFavicon";
+import {
+  currentTimeSelector,
+  useCurrentTimeInitializer,
+} from "src/clients/IndexPage/currentTimeAtom";
 import { usePomodoroTimer } from "src/clients/IndexPage/usePomodoroTimer";
 import { COLOR } from "src/presentations/COLOR";
+import { SEO } from "src/clients/SEO/@SEO";
 
 export const IndexPage: React.FC = () => {
   const currentTime = useRecoilValue(currentTimeSelector.formated);
@@ -12,10 +14,11 @@ export const IndexPage: React.FC = () => {
   usePageIntializer();
   return (
     <>
-      <Head>
-        <title>🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅</title>
-        <EmojiFavicon emoji={"🍅"} />
-      </Head>
+      <SEO
+        title={`🍅🍅🍅🍅🍅`}
+        description="Tomatoooo, the Pomodoro timer."
+        faviconEmoji="🍅"
+      />
       <div css={$indexPage}>
         <aside css={$currentTime}>{currentTime}</aside>
         <main css={$pomodoro}>
