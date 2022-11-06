@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import Head from "next/head";
 import { useRecoilValue } from "recoil";
 import { currentTimeSelector, useCurrentTimeInitializer } from "src/clients/IndexPage/currentTimeAtom";
+import { EmojiFavicon } from "src/clients/IndexPage/emojiFavicon";
 import { usePomodoroTimer } from "src/clients/IndexPage/usePomodoroTimer";
 import { COLOR } from "src/presentations/COLOR";
 
@@ -12,7 +13,8 @@ export const IndexPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Dailyboard</title>
+        <title>🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅</title>
+        <EmojiFavicon emoji={"🍅"} />
       </Head>
       <div css={$indexPage}>
         <aside css={$currentTime}>{currentTime}</aside>
