@@ -72,6 +72,7 @@ const $currentTime = css`
     padding: 6px 12px;
     border-radius: 2px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    @media screen and (max-width:480px) { display: none; }
 `
 
 const $pomodoro = css`
@@ -82,11 +83,16 @@ const $pomodoro = css`
   height: 100%;
   position: relative;
   width: 100%;
+  
   & > p {
     text-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     color: #ffffffe1;
-    font-size: 32px;
     line-height: 1;
+
+    font-size: 28px;
+    @media screen and (max-width:480px) { font-size: 22px; }
+    @media screen and (max-width:340px) { font-size: 20px; }
+    
     & > span {
       font-size: inherit;
     }
@@ -96,7 +102,10 @@ const $pomodoro = css`
     background-color: #0071b7;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: none;
+    
     padding: 6px 62px;
+    @media screen and (max-width:480px) { padding: 4px 44px; }
+
     color: #ffffffe1;
     border-radius: 4px;
     font-size: 18px;
