@@ -11,9 +11,9 @@ export const DisplayIndexPage: React.FC = () => {
       <div>
         {currentTime}
       </div>
-      <div>
+      {/* <div>
         {displayMessage(pomodoro.secondsToEnd, pomodoro.isInitial)}
-      </div>
+      </div> */}
       <div>
         {!pomodoro.isInitial && (
           <>
