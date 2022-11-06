@@ -1,12 +1,10 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { FC } from "react";
-import { EmojiFavicon } from "src/clients/SEO/emojiFavicon";
 
 type Props = {
   title: string;
   description: string;
-  faviconEmoji: string;
 }
 
 const CONTENT_TYPE = "website";
@@ -22,7 +20,11 @@ export const SEO: FC<Props> = (props) => {
     <Head>
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
-      <EmojiFavicon emoji={props.faviconEmoji} />
+      
+      {/* Favicon */}
+      <link rel="icon" href="favicon.ico" />
+      <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 
       {/* Open Graph */}
       <meta property="og:title" content={props.title} />
