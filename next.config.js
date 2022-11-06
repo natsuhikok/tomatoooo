@@ -6,5 +6,6 @@ module.exports = {
   env: {
     BUILT_AT: moment().format("YYYYMMDDHHmmss"),
     CLIENT_SHA: git.long(),
+    CLIENT_URL: "https://tomatoooo.netlify.app",
   }
 };
