@@ -12,17 +12,17 @@ type Props = {
 const CONTENT_TYPE = "website";
 const SITE_NAME = "Tomatoooo";
 const LOCALE = "en_US";
-const TWITTER_NAME = "hikonaz";
+const TWITTER_NAME = "@hikonaz";
 const IMAGE_URI = `${process.env.CLIENT_URL}/ogp.png`;
 
 export const SEO: FC<Props> = (props) => {
   const router = useRouter();
-  const currentPageURI = `${process.env.CLIENT_URL}/${router.pathname}`;
+  const currentPageURI = `${process.env.CLIENT_URL}${router.pathname}`;
   return (
     <Head>
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
-      {props.faviconEmoji && <EmojiFavicon emoji={props.faviconEmoji} />}
+      <EmojiFavicon emoji={props.faviconEmoji} />
 
       {/* Open Graph */}
       <meta property="og:title" content={props.title} />
