@@ -17,7 +17,6 @@ export const IndexPage: React.FC = () => {
       <SEO
         title={`🍅🍅🍅🍅🍅`}
         description="Tomatoooo, the Pomodoro timer."
-        faviconEmoji="🍅"
       />
       <div css={$indexPage}>
         <aside css={$currentTime}>{currentTime}</aside>
